@@ -89,7 +89,9 @@
                                 <echo message="unzip archive" />
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
-                                <move file="${project.build.directory}/mithril.js-${upstream.version}/mithril.js" todir="${destDir}" />
+                                <copy file="${project.build.directory}/mithril.js-${upstream.version}/mithril.js" todir="${destDir}" />
+                                <copy file="${project.build.directory}/mithril.js-${upstream.version}/mithril.min.js" todir="${destDir}" />
+                                <copy file="${project.build.directory}/mithril.js-${upstream.version}/mithril.min.js.map" todir="${destDir}" />
                             </target>
                         </configuration>
                     </execution>
