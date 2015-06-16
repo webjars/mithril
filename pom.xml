@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>mithril</artifactId>
-    <version>0.1.20-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
     <name>mithril.js</name>
     <description>WebJar for Mithril</description>
     <url>http://webjars.org</url>
@@ -45,7 +45,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>0.1.19</upstream.version>
+        <upstream.version>0.2.0</upstream.version>
         <upstream.url>https://github.com/lhorie/mithril.js/archive</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
         <requirejs>
@@ -89,7 +89,9 @@
                                 <echo message="unzip archive" />
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
-                                <move file="${project.build.directory}/mithril.js-${upstream.version}/mithril.js" todir="${destDir}" />
+                                <copy file="${project.build.directory}/mithril.js-${upstream.version}/mithril.js" todir="${destDir}" />
+                                <copy file="${project.build.directory}/mithril.js-${upstream.version}/mithril.min.js" todir="${destDir}" />
+                                <copy file="${project.build.directory}/mithril.js-${upstream.version}/mithril.min.js.map" todir="${destDir}" />
                             </target>
                         </configuration>
                     </execution>
