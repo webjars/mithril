@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>mithril</artifactId>
-    <version>0.2.5-SNAPSHOT</version>
+    <version>0.2.5</version>
     <name>mithril.js</name>
     <description>WebJar for Mithril</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>https://github.com/webjars/mithril</url>
         <connection>scm:git:https://github.com/webjars/mithril.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/mithril.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>mithril-0.2.5</tag>
     </scm>
 
     <developers>
